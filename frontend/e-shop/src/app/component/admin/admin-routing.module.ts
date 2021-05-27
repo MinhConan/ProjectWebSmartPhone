@@ -33,7 +33,6 @@ const routes: Routes = [
   },
   {
     path: 'list',
-    component: ListComponent,
     children:[
       {
         path: 'product',
