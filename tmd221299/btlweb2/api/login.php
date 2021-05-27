@@ -1,6 +1,7 @@
 <?php
-
-header("Access-Control-Allow-Methods:POST");
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Methods: OPTIONS,GET,POST,PUT,DELETE");
 include_once($_SERVER['DOCUMENT_ROOT']."/btlweb2/model/userModel.php");
 $errorMess=["result"=>0,"mess"=>"Đăng nhập thất bại"];
     $input = json_decode(file_get_contents('php://input'),true);
