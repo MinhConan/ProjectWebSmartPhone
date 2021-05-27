@@ -8,6 +8,9 @@ import { ViewComponent } from './view/view.component';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
 import { FormsModule } from '@angular/forms';
+import { ListOrderComponent } from './list-order/list-order.component';
+import { ViewOrderComponent } from './view-order/view-order.component';
+import { EditOrderComponent } from './edit-order/edit-order.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { FormsModule } from '@angular/forms';
     ViewComponent,
     ListComponent,
     EditComponent,
+    ListOrderComponent,
+    ViewOrderComponent,
+    EditOrderComponent,
   ],
   imports: [CommonModule, AdminRoutingModule, FormsModule],
 })

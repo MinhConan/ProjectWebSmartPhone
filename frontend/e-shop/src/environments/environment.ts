@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: "http://localhost/websmartphone/api/",
-  login: "localhost/websmartphone/api/user/login.php",
+  login: "http://localhost/websmartphone/api/user/login.php",
   searchProduct: "http://localhost/websmartphone/api/product/search.php",
   addOrder: "http://localhost/websmartphone/api/orders/add.php",
   getOrderPaging: "http://localhost/websmartphone/api/orders/search.php",
@@ -25,10 +25,7 @@ export const environment = {
       add: "brand/add.php"
     }
   },
-  addOrderDetail: 'localhost/websmartphone/api/orderdetail/add.php',
-  admin:{
-    login: "user/user.php"
-  }
+  addOrderDetail: 'http://localhost/websmartphone/api/orderdetail/add.php',
 };
 
 /*

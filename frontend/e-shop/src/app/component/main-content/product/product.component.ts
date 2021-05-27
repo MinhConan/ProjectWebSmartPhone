@@ -54,8 +54,10 @@ export class ProductComponent implements OnInit, OnDestroy {
         this.filterBrand
       )
       .subscribe((res) => {
-        if(!res || !res.data) this.productList = [];
-        if(res.data.length === 0) return;
+        if(!res || !res.data || res.data.length === 0) {
+          this.pageIndex--;
+          return;
+        };
         this.productList = res.data;
       });
   }

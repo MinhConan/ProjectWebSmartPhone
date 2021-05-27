@@ -38,7 +38,12 @@
 
         public function search($page, $size, $name, $brandID){
             $page = ($page-1)*$size;
-            $query = "SELECT product.*, brand.Name as BrandName FROM product,brand where product.BrandID=brand.ID and product.Name like :Name and brand.ID = $brandID limit $page,$size";
+            if($brandID == -1) {
+                $query = "SELECT product.*, brand.Name as BrandName FROM product,brand where product.BrandID=brand.ID and product.Name like :Name limit $page,$size";
+            }
+            else{
+                $query = "SELECT product.*, brand.Name as BrandName FROM product,brand where product.BrandID=brand.ID and product.Name like :Name and brand.ID = $brandID limit $page,$size";
+            }
 
             $stmt = $this->conn->prepare($query);
             $data = '%'.$name.'%';

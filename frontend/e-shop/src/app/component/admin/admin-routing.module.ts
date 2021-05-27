@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditOrderComponent } from './edit-order/edit-order.component';
 import { EditComponent } from './edit/edit.component';
+import { ListOrderComponent } from './list-order/list-order.component';
 import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
+import { ViewOrderComponent } from './view-order/view-order.component';
 import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [
@@ -24,7 +27,7 @@ const routes: Routes = [
       },
       {
         path: 'order',
-        component: ViewComponent
+        component: ViewOrderComponent
       }
     ]
   },
@@ -38,7 +41,7 @@ const routes: Routes = [
       },
       {
         path: 'order',
-        component: ListComponent
+        component: ListOrderComponent
       }
     ]
   },
@@ -52,7 +55,7 @@ const routes: Routes = [
       },
       {
         path: 'order',
-        component: EditComponent
+        component: EditOrderComponent
       }
     ]
   },
@@ -66,7 +69,7 @@ const routes: Routes = [
       },
       {
         path: 'order',
-        component: EditComponent
+        component: EditOrderComponent
       }
     ]
   }

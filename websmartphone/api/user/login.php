@@ -1,6 +1,7 @@
 <?php
 
-header("Access-Control-Allow-Methods:POST");
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
 include_once($_SERVER['DOCUMENT_ROOT']."/websmartphone/model/userModel.php");
 $errorMess=["result"=>0,"mess"=>"Đăng nhập thất bại"];
     $input = json_decode(file_get_contents('php://input'),true);
