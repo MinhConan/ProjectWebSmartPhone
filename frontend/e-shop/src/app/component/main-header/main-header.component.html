@@ -1,0 +1,22 @@
+<div class="container flex">
+  <div class="left flex">
+    <div class="image">
+      <img src="assets/images/logo2.png" alt="CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHỆ">
+    </div>
+    <div class="search flex">
+      <div class="input">
+        <input type="text" [(ngModel)]="searchKey" placeholder="Nhập từ khóa tìm kiếm...">
+      </div>
+      <div>
+        <button class="btn" (click)="search()">Tìm kiếm</button>
+      </div>
+    </div>
+  </div>
+  <div class="right flex">
+    <div class="cart" (click)="router.navigate(['cart'])">
+    </div>
+    <div class="count" *ngIf="cartService.totalQuantity > 0">
+      {{ cartService.totalQuantity }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="cart-container">
+  <div class="header">Giỏ hàng</div>
+  <div class="list-product">
+    <ng-container *ngFor="let p of listProduct">
+      <div class="item flex">
+        <div class="col1">
+          <div class="name text-ellipsis">
+            {{ p.product.Name }}
+          </div>
+          <div class="price text-ellipsis">Đơn giá: {{ p.product.Price | currency: "VND" }}</div>
+        </div>
+        <div class="total-price">
+          {{ (p.product.Price * p.quantity) | currency: "VND" }}
+        </div>
+        <div class="quantity flex">
+          <div class="minus" (click)="minusProduct(p.product)">-</div>
+          <div class="number">
+            {{ p.quantity }}
+          </div>
+          <div class="add"(click)="addProduct(p.product)">+</div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div *ngIf="listProduct.length > 0" class="delete-cart" (click)="deleteCart()">
+    Xoá giỏ hàng
+  </div>
+  <div *ngIf="listProduct.length === 0 && !buySuccess" class="empty-cart" (click)="deleteCart()">
+    Không có sản phẩm trong giỏ hàng!
+  </div>
+  <div *ngIf="listProduct.length === 0 && buySuccess" class="empty-cart" (click)="deleteCart()">
+    Đặt hàng thành công!
+  </div>
+
+  <div *ngIf="listProduct.length > 0" class="customer flex">
+    <input type="text" placeholder="Họ tên" [(ngModel)]="order.Name" />
+    <input type="text" placeholder="Địa chỉ nhận hàng" [(ngModel)]="order.UserAddress" />
+    <input type="text" placeholder="Số điện thoại" [(ngModel)]="order.UserPhone" />
+  </div>
+  <div *ngIf="listProduct.length > 0" class="buy" (click)="buy()">
+    Đặt hàng ({{ cartService.totalPrice | currency: "VND" }})
+  </div>
+</div>

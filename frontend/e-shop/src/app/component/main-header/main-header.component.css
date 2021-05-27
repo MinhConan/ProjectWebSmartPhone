@@ -1,0 +1,91 @@
+.container {
+  margin: 30px 15vw;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container{
+    margin: 30px 5vw;
+    justify-content: space-between;
+  }
+}
+
+.left{
+  align-items: center;
+  flex-wrap: wrap;
+  width: 180%;
+}
+
+.search{
+  align-items: center;
+}
+
+.btn{
+  background-color: #958457;
+  width: 110px;
+  height: 41px;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  font-weight: bold;
+  top: -1px;
+  right: -1px;
+  outline: none;
+  cursor: pointer;
+}
+
+.image{
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+input{
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  outline: none;
+  background: transparent;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  height: 41px;
+  width: 35vw;
+}
+
+.right{
+  align-items: center;
+  position: relative;
+}
+
+.cart{
+  background: url("../../../assets/images/icon-cart-round.png") no-repeat center center;
+  position: relative;
+  width: 39px;
+  height: 39px;
+  float: right;
+  margin-right: 16px;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.user{
+  background: url("../../../assets/images/hd-login.png") no-repeat center center;
+  position: relative;
+  width: 39px;
+  height: 39px;
+  float: right;
+  margin-right: 16px;
+  font-size: 0;
+  cursor: pointer;
+}
+.count{
+  position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #ff4141;
+    width: 25px;
+    height: 15px;
+    font-size: 13px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,29 @@
+<div class="container-slide flex">
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="assets\images\slide-show1.png" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="assets\images\slide-show2.png" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="assets\images\slide-show3.png" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+    <a class="next" (click)="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" (click)="currentSlide(1)"></span> 
+      <span class="dot" (click)="currentSlide(2)"></span> 
+      <span class="dot" (click)="currentSlide(3)"></span> 
+    </div>
+</div>

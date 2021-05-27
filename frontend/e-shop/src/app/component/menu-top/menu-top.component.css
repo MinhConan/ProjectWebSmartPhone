@@ -1,0 +1,30 @@
+.menu-container {
+  overflow: hidden;
+  background-color: #958457;
+  padding: 0 15vw;
+}
+@media only screen and (max-width: 1200px) {
+  .menu-container {
+    overflow: hidden;
+    background-color: #958457;
+    padding: 0 5vw;
+  }
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.topnav a:hover {
+  background-color: #ab9d77;
+  color: #666;
+}
+
+.topnav a.active {
+  background-color: #ab9d77;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="header">Quản lý</div>
+  <select #sl name="" id="" [(ngModel)]="layoutCode" (change)="changeLayout(sl.value)">
+    <option value="product">Sản phẩm</option>
+    <option value="order">Đơn hàng</option>
+  </select>
+  <div class="search">
+    Tìm kiếm: <input type="text" [(ngModel)]="searchKey" (change)="search()">
+  </div>
+  <div class="table">
+    <table>
+      <tr>
+          <th *ngFor="let column of columnConfig">
+            {{ column.displayName }}
+          </th>
+      </tr>
+      <tbody>
+        <tr *ngFor="let l of list" (click)="view(l)">
+          <td *ngFor="let column of columnConfig">
+            {{ l[column.field] }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="owl-nav flex">
+    <div class="owl-prev" (click)="prev()"><i class="fa fa-angle-left"></i></div>
+    <div class="owl-next" (click)="next()"><i class="fa fa-angle-right"></i></div>
+  </div>
+</div>

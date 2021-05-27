@@ -1,0 +1,29 @@
+<div class="view-container flex">
+  <i class="fa fa-arrow-left fa-2x" aria-hidden="true" (click)="back()"></i>
+  <div class="header">
+    {{ product?.Name }}
+  </div>
+  <div class="body flex">
+    <div class="big-img">
+      <img class="image-product" src="{{product?.Image}}" alt="">
+    </div>
+    <div class="detail flex">
+      <div class="description-container flex">
+        <div class="price">
+          {{ product?.Price | currency: 'VND' }}
+        </div>
+        <div class="description">
+          {{ product?.Detail }}
+        </div>
+      </div>
+      <div class="buy flex">
+        <div class="buy-now flex" (click)="buyNow()">
+          Mua ngay
+        </div>
+        <div class="add-to-cart flex" (click)="addToCart()">
+          Thêm vào giỏ hàng
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

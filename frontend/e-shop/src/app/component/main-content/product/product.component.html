@@ -1,0 +1,38 @@
+<div class="product-list-container">
+  <div class="page-heading flex">
+    <p class="heading-title">Sản phẩm</p>
+  </div>
+
+  <div class="product-list flex">
+    <ng-container *ngFor="let product of productList; let index = index" >
+      <div class="product-item flex" (mouseenter)="mouseIndex=index" (mouseleave)="mouseIndex=-1">
+        <div class="product-image" (click)="viewProduct(product.ID)">
+          <img src="{{product.Image}}" alt="{{product.Name}}">
+        </div>
+        <div class="product-info flex" (click)="viewProduct(product.ID)">
+          <div class="product-title">
+            <a [routerLink]="'view/' + product.ID">
+              <h3 title="{{product.Name + ' | ' + product.Detail}}">{{product.Name}} | {{product.Detail}}</h3>
+            </a>
+          </div>
+          <div class="price">
+            <p>{{product.Price | currency : "VND"}} </p>
+          </div>
+        </div>
+        <div [ngClass]="{'hide': mouseIndex!==index}" class="more-detail flex">
+          <div class="buy-now" (click)="buyNow(product)">
+            Mua ngay
+          </div>
+          <div class="detail" (click)="addToCart(product)">
+            Thêm vào giỏ
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  
+  <div class="owl-nav flex">
+    <div class="owl-prev" (click)="prev()"><i class="fa fa-angle-left"></i></div>
+    <div class="owl-next" (click)="next()"><i class="fa fa-angle-right"></i></div>
+  </div>
+</div>

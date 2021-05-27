@@ -1,0 +1,30 @@
+.container{
+  padding: 200px 15vw;
+  justify-content: center;
+}
+
+input{
+  margin: 8px 0;
+  height: 32px;
+  width: 300px;
+}
+
+button{
+  width: 100px;
+  height: 32px;
+  margin-top: 8px;
+}
+
+.wrong-pass{
+  font-size: 13px;
+  color: rgb(250, 74, 74);
+}
+
+.main{
+  flex-direction: column;
+}
+
+.header{
+  font-size: 18px;
+  font-weight: bold;
+}

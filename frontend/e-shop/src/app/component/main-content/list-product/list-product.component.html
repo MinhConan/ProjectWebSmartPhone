@@ -1,0 +1,20 @@
+<div class="container-main-content flex">
+  <div class="category-container">
+    <ul class="list-menu">
+      <li class="memnu-item" *ngFor="let brand of listBrand">
+        <div class="item-text" [ngClass]="active===brand.ID ? 'active' : ''" (click)="filterBrand(brand.ID)">
+          <i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
+          <span>{{brand.Name}}</span>
+        </div>
+        <div class="seperator"></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide-show-container">
+    <app-slide-show></app-slide-show>
+  </div>
+</div>
+<div class="product">
+  <app-product></app-product>
+</div>

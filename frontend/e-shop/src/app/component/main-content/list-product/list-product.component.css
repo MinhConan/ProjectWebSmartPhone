@@ -1,0 +1,40 @@
+.container-main-content{
+  padding: 0 15vw;
+}
+@media only screen and (max-width: 1200px) {
+  .container-main-content{
+    padding: 0 5vw;
+  }
+}
+.category-container {
+  width: 300px;
+  padding: 8px;
+}
+
+ul{
+  list-style: none;
+}
+li{
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.menu-item{
+  padding: 8px;
+}
+
+.item-text i{
+  width: 32px;
+  text-align: center;
+}
+
+.seperator{
+  background-color: #ddd;
+  height: 1px;
+  width: 70%;
+}
+
+.active{
+  background: #958457;
+  padding: 2px 4px;
+  color: white;
+}

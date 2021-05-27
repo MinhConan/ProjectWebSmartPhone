@@ -1,0 +1,17 @@
+.footer-container{
+  margin: 32px 15vw;
+  border-top: 1px solid #ddd; 
+  font-weight: 700;
+  font-size: 16px;
+  height: 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer-container{
+    margin: 32px 5vw;
+  }
+}
+
+p{
+  margin: 16px 0;
+}
